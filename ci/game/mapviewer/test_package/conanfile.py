@@ -11,4 +11,8 @@ class mapviewerTestConan(ConanFile):
 
     def test(self):
         if not cross_building(self):
-            self.run("mapviewer", env="conanrun")
+            # This is not ideel but works for now.
+            print(f"Current directory: {os.getcwd()}")
+            os.chdir("../../../build/Release")
+            print(f"Current directory: {os.getcwd()}")
+            self.run("./mapviewer", env="conanrun")

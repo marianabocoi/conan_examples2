@@ -6,7 +6,7 @@ class graphicsRecipe(ConanFile):
     name = "graphics"
     version = "1.0"
 
-    requires = "mathlib/[>=1.0 <2]"
+    requires = "mathlib/[>=1.0 <2]@proj/stable"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
@@ -26,7 +26,7 @@ class graphicsRecipe(ConanFile):
         tc.generate()
         deps = CMakeDeps(self)
         deps.generate()
-    
+
     def layout(self):
         cmake_layout(self)
 

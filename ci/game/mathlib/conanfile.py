@@ -6,6 +6,7 @@ class mathlibRecipe(ConanFile):
     name = "mathlib"
     version = "1.0"
 
+
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}

@@ -11,4 +11,5 @@ class gameTestConan(ConanFile):
 
     def test(self):
         if not cross_building(self):
-            self.run("game", env="conanrun")
+            os.chdir("../../../build/Release")
+            self.run("./game", env="conanrun")
