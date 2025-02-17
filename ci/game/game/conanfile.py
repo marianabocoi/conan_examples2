@@ -7,7 +7,7 @@ class gameRecipe(ConanFile):
     version = "1.0"
     package_type = "application"
 
-    requires = "engine/[>=1.0 <2]"
+    requires = "engine/[>=1.0 <2]@proj/stable"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
