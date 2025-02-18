@@ -5,8 +5,6 @@ from conan.tools.cmake import CMakeToolchain, CMakeDeps, CMake, cmake_layout
 class engineRecipe(ConanFile):
     name = "engine"
     version = "1.0"
-    package_type = "static-library"
-
     requires = "ai/[>=1.0 <2]@proj/stable", "graphics/[>=1.0 <2]@proj/stable"
 
     # Binary configuration

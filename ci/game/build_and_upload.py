@@ -71,7 +71,7 @@ def process_package(package, base_dir, user, channel, reference, version=None):
         return False
 
     # Clean local cache before uploading
-    clean_cmd = "rm -rf ~/.conan/data"
+    clean_cmd = "conan remove -c '*/*@proj/stable'"
     print(f"Running: {clean_cmd}")
     if os.system(clean_cmd) != 0:
         print("Error cleaning local cache")
