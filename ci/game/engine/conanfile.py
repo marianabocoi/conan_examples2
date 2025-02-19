@@ -5,7 +5,12 @@ from conan.tools.cmake import CMakeToolchain, CMakeDeps, CMake, cmake_layout
 class engineRecipe(ConanFile):
     name = "engine"
     version = "1.0"
-    requires = "ai/[>=1.0 <2]@proj/stable", "graphics/[>=1.0 <2]@proj/stable"
+    # requires = "ai/[>=1.0 <2]@proj/stable", "graphics/[>=1.0 <2]@proj/stable"
+
+    def requirements(self):
+        self.requires("mathlib/2.0@proj/stable", force=True)
+        self.requires("ai/1.0@proj/stable")
+
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"

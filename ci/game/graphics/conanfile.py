@@ -5,9 +5,7 @@ from conan.tools.cmake import CMakeToolchain, CMakeDeps, CMake, cmake_layout
 class graphicsRecipe(ConanFile):
     name = "graphics"
     version = "1.0"
-
-    def requirements(self):
-        self.requires("mathlib/[>1.0 <=2]@proj/stable", visible=False)
+    requires = "mathlib/[>1.0 <=2]@proj/stable"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"

@@ -5,14 +5,12 @@ from conan.tools.cmake import CMakeToolchain, CMakeDeps, CMake, cmake_layout
 class aiRecipe(ConanFile):
     name = "ai"
     version = "1.0"
-
-    def requirements(self):
-        self.requires("mathlib/[>=1.0 <2]@proj/stable", visible=False)
+    requires = "mathlib/[>=1.0 <2]@proj/stable"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
-    default_options = {"shared": True, "fPIC": True}
+    default_options = {"shared": False, "fPIC": True}
 
     # Sources are located in the same place as this recipe, copy them to the recipe
     exports_sources = "CMakeLists.txt", "src/*", "include/*"
