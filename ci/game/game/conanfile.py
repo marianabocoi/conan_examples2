@@ -10,7 +10,10 @@ class gameRecipe(ConanFile):
     requires = "engine/[>=1.0 <2]@proj/stable"
 
     # Binary configuration
-    settings = "os", "compiler", "build_type", "arch"
+    settings = "os", "compiler", "build_type", "arch", "foo"
+
+    options = {"fPIC": [True, False]}
+    default_options = { "fPIC": True}
 
     # Sources are located in the same place as this recipe, copy them to the recipe
     exports_sources = "CMakeLists.txt", "src/*"

@@ -57,7 +57,7 @@ def build_and_upload_packages():
             continue
 
         # Create the package
-        create_cmd = f"conan create . {reference} -r conan-local"
+        create_cmd = f"conan create . {reference} -r conan-local -pr custom_and_env"
         print(f"Running: {create_cmd}")
         if os.system(create_cmd) != 0:
             print(f"Error creating package {package}")

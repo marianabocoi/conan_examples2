@@ -1,0 +1,35 @@
+[settings]
+    arch=armv8
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=16
+    os=Macos
+
+[requires]
+
+
+[options]
+    fPIC=True
+    shared=False
+
+[full_settings]
+    arch=armv8
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=16
+    os=Macos
+
+[full_requires]
+
+
+[full_options]
+    fPIC=True
+    shared=False
+
+[recipe_hash]
+
+
+[env]
+

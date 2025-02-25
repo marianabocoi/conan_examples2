@@ -1,0 +1,37 @@
+[settings]
+    arch=armv8
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=16
+    os=Macos
+
+[requires]
+    graphics/1.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=armv8
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=16
+    os=Macos
+
+[full_requires]
+    graphics/1.0@proj/stable:9c73cc624cf1052fd8c1f2cb24a17c2930a20d65
+    mathlib/1.0@proj/stable:8d90ba85b43fea24e3a3510351460f543de6160c
+
+[full_options]
+    graphics:fPIC=True
+    graphics:shared=False
+    mathlib:fPIC=True
+    mathlib:shared=False
+
+[recipe_hash]
+
+
+[env]
+
